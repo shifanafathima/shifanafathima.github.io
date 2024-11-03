@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Stylish font */
+    background-color: #f9f9f9; /* Light background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Relative positioning for footer */
+}
+
+/* Main Container for Form */
+.container {
+    background: #ffffff; /* Clean white background */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 40px; /* More padding */
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Limit max width */
+    text-align: center; /* Center text */
+}
+
+/* Header Styles */
+h1 {
+    color: #4a90e2; /* Bright blue for headings */
+    margin-bottom: 20px; /* Space below heading */
+    font-size: 36px; /* Larger font size */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+    text-align: left; /* Left align labels */
+}
+
+label {
+    display: block; /* Block-level label */
+    margin-bottom: 8px; /* Space below label */
+    font-weight: 600; /* Bold label text */
+    color: #333; /* Dark text for labels */
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 12px; /* Inner padding for inputs */
+    border: 2px solid #4a90e2; /* Colorful border for inputs */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Font size for input text */
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styles */
+button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Inner padding for button */
+    background-color: #4a90e2; /* Bright blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+    background-color: #007bff; /* Darker blue on hover */
+}
+
+/* Full-Width Footer Styles */
+footer {
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px; /* Padding around footer */
+    border-radius: 20px 20px 0 0; /* Rounded corners for footer */
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+    color: #777; /* Gray text for footer */
+    text-align: center; /* Center text */
+}
+
+/* Links in Footer */
+footer a {
+    color: #4a90e2; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 28px; /* Adjusted heading size */
+    }
+}
