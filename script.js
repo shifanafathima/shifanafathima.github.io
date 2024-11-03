@@ -1,3 +1,4 @@
+//JS file
 // Store user data in local storage for persistence across sessions
 function saveUserData(username, password) {
     let users = JSON.parse(localStorage.getItem('users')) || [];
