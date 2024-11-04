@@ -70,14 +70,14 @@ input[type="text"],
 input[type="password"],
 input[type="email"] {
     width: 100%;
-    padding: 15px; /* Slightly reduced padding */
-    font-size: 2rem; /* Adjusted font size for inputs */
+    padding: 15px; /* Padding for input fields */
+    font-size: 2rem; /* Font size for inputs */
     border: 1px solid #8D6E63; /* Softer border */
     border-radius: 5px; /* Subtle rounded corners */
     background-color: #fce4ec; /* Light pink background for fields */
     color: #3E2723; /* Text color */
     font-family: 'Courier New', monospace; /* Vintage typewriter feel */
-    margin-bottom: 1rem; /* Reduced space between fields */
+    margin-bottom: 1rem; /* Space between fields */
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -92,12 +92,12 @@ input[type="email"]:focus {
 /* Buttons */
 button {
     width: 100%;
-    padding: 12px; /* Adjusted padding for button */
+    padding: 12px; /* Padding for button */
     background-color: #8D6E63; /* Button color */
     color: #ffffff;
     border: none;
     border-radius: 5px; /* Rounded corners */
-    font-size: 2rem; /* Adjusted button font size */
+    font-size: 2rem; /* Button font size */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     font-family: 'Garamond', serif; /* Consistent font */
@@ -105,21 +105,20 @@ button {
 
 button:hover {
     background-color: #6D4C41; /* Darker button color on hover */
-    transform: scale(1.03);
 }
 
 /* Message Display */
 .message {
     color: #e74c3c; /* Red color for error messages */
-    margin-top: 1rem; /* Reduced space above messages */
-    font-size: 1.5rem; /* Adjusted message font size */
+    margin-top: 1rem; /* Space above messages */
+    font-size: 1.5rem; /* Message font size */
 }
 
 /* Footer */
 footer {
     background-color: rgba(255, 255, 255, 0.85);
     text-align: center;
-    padding: 1rem; /* Adjusted footer padding */
+    padding: 1rem; /* Footer padding */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     margin-top: auto; /* Ensures footer stays at the bottom of the page */
     width: 100%; /* Ensure the footer takes the full width */
@@ -138,12 +137,13 @@ footer {
     margin-right: auto; /* Center the containers */
 }
 
-/* Login and Signup Page Specific Styles */
-.login-container,
-.signup-container {
+/* Adjust Login and Signup Pages */
+.login-container, .signup-container {
+    max-width: 800px; /* Maximum width for forms */
     margin: 20px; /* Margin to prevent touching edges */
-    padding: 2rem; /* Padding around the content */
+    padding: 2rem; /* Padding around the form */
     background: rgba(255, 255, 255, 0.85); /* Soft white with transparency */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-align: center; /* Center the text inside the container */
 }
