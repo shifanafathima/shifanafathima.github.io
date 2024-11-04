@@ -1,116 +1,120 @@
-/* General Reset */
-* {
+/* General Reset and Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Background */
 body {
-    font-family: 'Poppins', sans-serif; /* Stylish font */
-    background-color: #f9f9f9; /* Light background */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Relative positioning for footer */
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif; /* Classic serif font */
+    color: #3E2723; /* Dark brown for vintage feel */
+    background: url('https://images.unsplash.com/photo-1517946108436-1d8a25ee1357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIwfHxlbnwwfHx8fDE2ODQ5NzU5NDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed; /* Elegant background image */
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    min-height: 100vh; /* Make sure the body takes the full height of the viewport */
 }
 
-/* Main Container for Form */
-.container {
-    background: #ffffff; /* Clean white background */
-    border-radius: 20px; /* More rounded corners */
-    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    padding: 40px; /* More padding */
-    width: 90%; /* Responsive width */
-    max-width: 400px; /* Limit max width */
-    text-align: center; /* Center text */
+/* Container for the Form */
+.login-container, .signup-container, .welcome-container {
+    background: rgba(255, 255, 255, 0.85); /* Soft white with a hint of transparency */
+    padding: 2.5rem; /* Adjusted padding */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 80%; /* Set width to 80% for a more spacious look */
+    max-width: 1200px; /* Limit the maximum width for larger screens */
+    margin: auto; /* Center the container */
+    text-align: center; /* Center text inside the container */
+    flex-grow: 1; /* Allow the container to grow and take available space */
 }
 
-/* Header Styles */
+/* Header */
+h1, h2 {
+    font-family: 'Garamond', serif; /* Elegant header font */
+    color: #5D4037; /* Darker shade for header */
+    margin-bottom: 1.5rem; /* Reduced margin */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Adjusted Font Sizes */
 h1 {
-    color: #4a90e2; /* Bright blue for headings */
-    margin-bottom: 20px; /* Space below heading */
-    font-size: 36px; /* Larger font size */
+    font-size: 4.5rem; /* Font size for the header */
 }
 
-/* Form Group Styles */
-.form-group {
-    margin-bottom: 20px; /* Space between form groups */
-    text-align: left; /* Left align labels */
-}
-
-label {
-    display: block; /* Block-level label */
-    margin-bottom: 8px; /* Space below label */
-    font-weight: 600; /* Bold label text */
-    color: #333; /* Dark text for labels */
+h2 {
+    font-size: 3.5rem; /* Adjusted size for subheaders */
 }
 
 /* Input Fields */
-input[type="text"], input[type="password"] {
-    width: 100%; /* Full width inputs */
-    padding: 12px; /* Inner padding for inputs */
-    border: 2px solid #4a90e2; /* Colorful border for inputs */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 16px; /* Font size for input text */
-    transition: border-color 0.3s ease; /* Smooth transition */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px; /* Slightly reduced padding */
+    font-size: 2rem; /* Adjusted font size for inputs */
+    border: 1px solid #8D6E63; /* Softer border */
+    border-radius: 5px; /* Subtle rounded corners */
+    background-color: #fce4ec; /* Light pink background for fields */
+    color: #3E2723; /* Text color */
+    font-family: 'Courier New', monospace; /* Vintage typewriter feel */
+    margin-bottom: 1rem; /* Reduced space between fields */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #007bff; /* Change border color on focus */
-    outline: none; /* Remove outline */
+/* Input Focus State */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #9C27B0; /* Focus border color */
+    box-shadow: 0 0 10px rgba(156, 39, 176, 0.5); /* Focus effect */
 }
 
-/* Button Styles */
+/* Buttons */
 button {
-    width: 100%; /* Full width button */
-    padding: 12px; /* Inner padding for button */
-    background-color: #4a90e2; /* Bright blue background */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Font size for button text */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    margin-top: 10px; /* Space above button */
+    width: 100%;
+    padding: 12px; /* Adjusted padding for button */
+    background-color: #8D6E63; /* Button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 2rem; /* Adjusted button font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Garamond', serif; /* Consistent font */
 }
 
 button:hover {
-    background-color: #007bff; /* Darker blue on hover */
+    background-color: #6D4C41; /* Darker button color on hover */
+    transform: scale(1.03);
 }
 
-/* Full-Width Footer Styles */
+/* Message Display */
+.message {
+    color: #e74c3c; /* Red color for error messages */
+    margin-top: 1rem; /* Reduced space above messages */
+    font-size: 1.5rem; /* Adjusted message font size */
+}
+
+/* Footer */
 footer {
-    position: absolute; /* Absolute positioning */
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-    padding: 20px; /* Padding around footer */
-    border-radius: 20px 20px 0 0; /* Rounded corners for footer */
-    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1); /* Shadow for footer */
-    color: #777; /* Gray text for footer */
-    text-align: center; /* Center text */
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding: 1rem; /* Adjusted footer padding */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Links in Footer */
+/* Ensure footer is not fixed */
 footer a {
-    color: #4a90e2; /* Blue color for links */
-    text-decoration: none; /* Remove underline */
+    color: #8D6E63; /* Consistent footer link color */
+    text-decoration: none;
+    font-size: 1.5rem; /* Adjusted footer link font size */
 }
 
 footer a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 400px) {
-    .container {
-        padding: 20px; /* Reduced padding for smaller screens */
-    }
-
-    h1 {
-        font-size: 28px; /* Adjusted heading size */
-    }
+    text-decoration: underline;
 }
