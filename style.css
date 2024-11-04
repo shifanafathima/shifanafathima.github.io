@@ -9,8 +9,6 @@
 
 /* Background */
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Times New Roman', serif; /* Classic serif font */
     color: #3E2723; /* Dark brown for vintage feel */
     background: url('https://images.unsplash.com/photo-1517946108436-1d8a25ee1357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIwfHxlbnwwfHx8fDE2ODQ5NzU5NDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed; /* Elegant background image */
@@ -22,12 +20,15 @@ body {
     flex-direction: column; /* Ensure content stacks vertically */
 }
 
-/* Container for Welcome Page */
-.welcome-container {
-    background: transparent; /* Make the background transparent */
-    padding: 0; /* Remove padding */
-    text-align: center; /* Center the text */
-    margin: 20px; /* Add margin to avoid touching the edges */
+/* Main Container for Pages */
+.container {
+    max-width: 800px; /* Maximum width for main content */
+    margin: 20px; /* Margin to prevent touching edges */
+    padding: 2rem; /* Padding around the content */
+    background: rgba(255, 255, 255, 0.85); /* Soft white with transparency */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-align: center; /* Center the text inside the container */
 }
 
 /* Header */
@@ -40,11 +41,28 @@ h1, h2 {
 
 h1 {
     font-size: 4.5rem; /* Header size */
-    margin: 0; /* Remove default margin */
 }
 
 h2 {
     font-size: 3.5rem; /* Subheader size */
+}
+
+/* Paragraph */
+p {
+    font-size: 2rem; /* Size of paragraph text */
+    margin-top: 1rem; /* Space above paragraph */
+}
+
+/* Link Styling */
+a {
+    color: #8D6E63; /* Link color */
+    font-weight: bold; /* Bold for visibility */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #6D4C41; /* Darker color on hover */
 }
 
 /* Input Fields */
@@ -118,4 +136,14 @@ footer {
     width: 100%; /* Full width for smaller screens */
     margin-left: auto; /* Center the containers */
     margin-right: auto; /* Center the containers */
+}
+
+/* Login and Signup Page Specific Styles */
+.login-container,
+.signup-container {
+    margin: 20px; /* Margin to prevent touching edges */
+    padding: 2rem; /* Padding around the content */
+    background: rgba(255, 255, 255, 0.85); /* Soft white with transparency */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
