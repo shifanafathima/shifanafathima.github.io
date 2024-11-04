@@ -16,21 +16,16 @@ body {
     background: url('https://images.unsplash.com/photo-1517946108436-1d8a25ee1357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIwfHxlbnwwfHx8fDE2ODQ5NzU5NDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed; /* Elegant background image */
     background-size: cover;
     display: flex;
-    flex-direction: column; /* Arrange children in a column */
-    min-height: 100vh; /* Make sure the body takes the full height of the viewport */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Container for the Form */
-.login-container, .signup-container, .welcome-container {
-    background: rgba(255, 255, 255, 0.85); /* Soft white with a hint of transparency */
-    padding: 2.5rem; /* Adjusted padding */
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    width: 80%; /* Set width to 80% for a more spacious look */
-    max-width: 1200px; /* Limit the maximum width for larger screens */
-    margin: auto; /* Center the container */
-    text-align: center; /* Center text inside the container */
-    flex-grow: 1; /* Allow the container to grow and take available space */
+/* Container for Welcome Page */
+.welcome-container {
+    background: transparent; /* Make the background transparent */
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center the text */
 }
 
 /* Header */
@@ -41,13 +36,13 @@ h1, h2 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
-/* Adjusted Font Sizes */
 h1 {
-    font-size: 4.5rem; /* Font size for the header */
+    font-size: 4.5rem; /* Header size */
+    margin: 0; /* Remove default margin */
 }
 
 h2 {
-    font-size: 3.5rem; /* Adjusted size for subheaders */
+    font-size: 3.5rem; /* Subheader size */
 }
 
 /* Input Fields */
@@ -102,13 +97,16 @@ button:hover {
 
 /* Footer */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: rgba(255, 255, 255, 0.85);
     text-align: center;
     padding: 1rem; /* Adjusted footer padding */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure footer is not fixed */
 footer a {
     color: #8D6E63; /* Consistent footer link color */
     text-decoration: none;
@@ -117,4 +115,19 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* About and Contact Us Pages */
+.about-container, .contact-container {
+    margin: 20px; /* Margin for mobile screens */
+    padding: 20px; /* Padding for content */
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Ensure containers do not touch the edges on mobile */
+.about-container, .contact-container {
+    max-width: 800px; /* Limit width on larger screens */
+    margin: 20px auto; /* Center the containers */
 }
