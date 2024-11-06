@@ -11,13 +11,22 @@
 body {
     font-family: 'Times New Roman', serif; /* Classic serif font */
     color: #3E2723; /* Dark brown for vintage feel */
-    background: url('https://images.unsplash.com/photo-1517946108436-1d8a25ee1357?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIwfHxlbnwwfHx8fDE2ODQ5NzU5NDA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed; /* Elegant background image */
+    
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column; /* Ensure content stacks vertically */
+    background-image: url('WhatsApp\ Image\ 2024-11-06\ at\ 14.51.21_4686b10c.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:auto;
+    object-fit: cover;
+    max-width: 100%;
+
 }
 
 /* Main Container for Pages */
